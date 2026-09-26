@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugar Bloom | حلويات ومخبوزات</title>
+  <meta name="description" content="Sugar Bloom - أشهى الحلويات والمخبوزات">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap');
+
+    :root {
+      --pink: #F47C8C;
+      --pink-dark: #D94F63;
+      --pink-soft: #FFF0F3;
+      --cream: #FFFDF8;
+      --gold: #D4AF37;
+      --brown: #70483A;
+      --text: #3E2723;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
+      --shadow: 0 12px 30px rgba(112, 72, 58, .12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 253, 248, .94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #f3d9de;
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--pink-dark);
+      font-family: "Aref Ruqaa", serif;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--pink-dark); }
+
+    .hero {
+      padding: 42px 0 70px;
+      text-align: center;
+    }
+
+    .hero-image {
+      width: min(100%, 760px);
+      height: 420px;
+      object-fit: cover;
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      border: 4px solid white;
+    }
+
+    .hero h1 {
+      margin-top: 28px;
+      color: var(--brown);
+      font-family: "Aref Ruqaa", serif;
+      font-size: clamp(38px, 7vw, 64px);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 12px auto 22px;
+      color: #765b51;
+      font-size: 18px;
+    }
+
+    .section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--brown);
+      font-family: "Aref Ruqaa", serif;
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+
+    .menu-box {
+      background: var(--pink-soft);
+      border: 2px solid var(--gold);
+      border-radius: 28px;
+      padding: 25px 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .menu-box ol {
+      padding-right: 25px;
+      color: var(--brown);
+      font-weight: 600;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid #f5e3e6;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(112, 72, 58, .18);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content { padding: 16px; text-align: center; }
+
+    .card h3 {
+      color: var(--brown);
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      color: var(--pink-dark);
+      font-weight: 800;
+    }
+
+    .features {
+      background: var(--pink-soft);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 22px;
+      text-align: center;
+      border: 1px solid #f5dce1;
+    }
+
+    .feature span { font-size: 34px; }
+
+    .order-area {
+      text-align: center;
+      padding: 55px 0 75px;
+    }
+
+    .order-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--whatsapp);
+      color: white;
+      border: 0;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font: 700 17px "Cairo", sans-serif;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(37, 211, 102, .2);
+      transition: .2s ease;
+    }
+
+    .order-btn:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: var(--brown);
+      color: white;
+      text-align: center;
+      padding: 22px;
+    }
+
+    @media (max-width: 800px) {
+      .products { grid-template-columns: repeat(2, 1fr); }
+      .feature-grid { grid-template-columns: 1fr; }
+      .hero-image { height: 330px; }
+    }
+
+    @media (max-width: 560px) {
+      nav { flex-direction: column; padding: 12px 0; }
+      .nav-links { gap: 12px; font-size: 14px; flex-wrap: wrap; justify-content: center; }
+      .hero { padding-top: 25px; }
+      .hero-image { height: 270px; border-radius: 22px; }
+      .products { grid-template-columns: 1fr; }
+      .card img { height: 240px; }
+      .section { padding: 45px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#home">Sugar Bloom 🍰</a>
+        <div class="nav-links">
+          <a href="#home">الرئيسية</a>
+          <a href="#menu">ماذا نقدم</a>
+          <a href="#products">منتجاتنا</a>
+          <a href="#features">مميزاتنا</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <img class="hero-image"
+        src="https://i.ibb.co/Zz7GW339/file-000000002c10821095047cedbe5fee93.png"
+        alt="كيكة من Sugar Bloom">
+      <h1>أهلاً بكم في Sugar Bloom</h1>
+      <p>حيث نقدم أشهى الحلويات والمخبوزات، بطعم جميل ولمسة محبة في كل قطعة. 🍰✨</p>
+    </section>
+
+    <section class="section container" id="menu">
+      <h2 class="section-title">ماذا نقدم؟</h2>
+      <div class="menu-box">
+        <ol>
+          <li>كيكة بالشوكولاتة</li>
+          <li>بسبوسة</li>
+          <li>كيكة عادية</li>
+          <li>دوناتس</li>
+          <li>كوب كيك</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section container" id="products">
+      <h2 class="section-title">حلوياتنا 🍰</h2>
+      <div class="products">
+        <article class="card">
+          <img src="https://i.ibb.co/S4T1ZscF/file-00000000874481fd9349822c27d8c155.png" alt="دوناتس">
+          <div class="card-content"><h3>دوناتس</h3><p class="price">25 ألف</p></div>
+        </article>
+
+        <article class="card">
+          <img src="https://i.ibb.co/Y4Pn8CXH/file-00000000d2f481f4b534fa5472d67ad4.png" alt="بسبوسة">
+          <div class="card-content"><h3>بسبوسة</h3><p class="price">20 ألف</p></div>
+        </article>
+
+        <article class="card">
+          <img src="https://i.ibb.co/VPW9TsL/file-00000000dbb88210a4e0bc68209a2702.png" alt="كيكة بالشوكولاتة">
+          <div class="card-content"><h3>كيكة بالشوكولاتة</h3><p class="price">30 ألف</p></div>
+        </article>
+
+        <article class="card">
+          <img src="https://i.ibb.co/SDvF16P2/file-00000000e1e08211872637bcd0f120d7.png" alt="كوب كيك">
+          <div class="card-content"><h3>كوب كيك</h3><p class="price">25 ألف</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <h2 class="section-title">مميزاتنا ✨</h2>
+        <div class="feature-grid">
+          <div class="feature"><span>🍓</span><h3>نكهة عصرية وجذابة</h3><p>حلويات بطعم وشكل يفتح النفس.</p></div>
+          <div class="feature"><span>🚚</span><h3>توصيل سريع</h3><p>نوصل طلبك بأسرع وقت ممكن.</p></div>
+          <div class="feature"><span>🎉</span><h3>تغطية للمناسبات</h3><p>حلويات مناسبة لأجمل لحظاتك.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-area">
+      <h2 class="section-title">جاهزين لطلبك؟ 💗</h2>
+      <button class="order-btn" onclick="orderWhatsApp()">اطلب الآن عبر واتساب 💬</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Sugar Bloom — جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    function orderWhatsApp() {
+      window.open("https://wa.me/message/KG7RDC6ZDLB7O1", "_blank");
+    }
+  </script>
+</body>
+</html>
